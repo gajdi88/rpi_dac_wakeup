@@ -10,8 +10,9 @@ Type dmesg and find the string “idVendor” and “idProduct” of your DAC (t
 
 ## Step 2
 Type sudo nano /etc/udev/rules.d/10-DAC.rules and paste this string:
-
+```
 SUBSYSTEM=="usb", ACTION=="add", ATTRS{idVendor}=="xxxx", ATTR{idProduct}=="yyyy", RUN+="/home/tc/DAC.sh"
+```
 where xxxx and yyyy are what you found in the previous step.
 
 Press control+o to save and control+x to exit.
