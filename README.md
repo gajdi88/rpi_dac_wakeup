@@ -19,6 +19,7 @@ Press control+o to save and control+x to exit.
 ## Step 3
 Type sudo nano /home/tc/DAC.sh and paste this text:
 
+```
 #!/bin/sh
 
 giar=$(sudo /usr/local/etc/init.d/squeezelite status)
@@ -26,6 +27,7 @@ if [ "$giar" = "Squeezelite not running." ];
 then
 	sudo /usr/local/etc/init.d/squeezelite restart
 fi
+```
 Press control+o to save and control+x to exit.
 
 ## Step 4
@@ -33,8 +35,10 @@ Type sudo chmod 755 /home/tc/DAC.sh to make the script executable.
 
 ## Step 5
 Type sudo nano /opt/.filetool.lst and add at the end of file this string to backup the mod:
+```
 
 etc/udev/rules.d/10-DAC.rules
+```
 Press control+o to save and control+x to exit.
 
 ## Step 6
