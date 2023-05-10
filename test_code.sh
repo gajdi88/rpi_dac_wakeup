@@ -19,3 +19,9 @@ sleep 1s
 
 # turn off
 echo 0 > /sys/class/gpio/gpio3/value
+
+giar=$(sudo /usr/local/etc/init.d/squeezelite status)
+if [ "$giar" = "Squeezelite not running." ];
+then
+	sudo /usr/local/etc/init.d/squeezelite restart
+fi
