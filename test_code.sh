@@ -8,5 +8,14 @@ echo "out" > /sys/class/gpio/gpio3/direction
 # turn off
 echo 0 > /sys/class/gpio/gpio3/value
 
+# wait
+sleep .2s
+
 # turn on
 echo 1 > /sys/class/gpio/gpio3/value
+
+# wait
+sleep 1s
+
+# turn off
+echo 0 > /sys/class/gpio/gpio3/value
